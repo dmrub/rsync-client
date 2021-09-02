@@ -1,6 +1,7 @@
-FROM alpine:3.5
+FROM alpine:3.13
 
-MAINTAINER Dmitri Rubinstein
+LABEL org.opencontainers.image.authors="Dmitri Rubinstein"
+LABEL org.opencontainers.image.source="https://github.com/dmrub/rsync-client"
 
 RUN apk --update --no-cache add bash rsync && \
     rm -rf /var/cache/apk/*
